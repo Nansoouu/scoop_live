@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription Scoop Live</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <!-- Remplacez "event-image.jpg" par le nom de votre image d'événement -->
+    <img src="https://olvallee.twic.pics/wp-content/uploads/2025/01/SCOOP-Live_LDLC_03_1280x720.jpg" alt="Image de l'événement">
+    <h1>SCOOP LIVE</h1>
+    <p class="event-date">26 février à 19h30</p>
+  </header>
+  
+  <section class="event-card">
+    <div class="card">
+      <p>Vivez l'expérience Scoop Live à la LDLC Arena !</p>
+      <p>Rendez-vous le 26 février à 19h30 pour un événement inoubliable.</p>
+      <p>Processus de réservation :</p>
+      <ol>
+        <li>Vous réservez jusqu'au 17 février 2025.</li>
+        <li>Vous recevez vos places par email entre le 20 et le 23.</li>
+        <li>Nous vous attendons le 26.</li>
+      </ol>
+      <p>Réservez dès maintenant : les réservations se font gratuitement pour Nans Marcoux.</p>
+    </div>
+  </section>
+  
+  
+  
+  <section class="sold-out-banner">
+    <div class="banner-content">
+      <h2>Toutes les places de Nans sont épuisées !</h2>
+      <p>Merci de votre intérêt pour l'événement. Les réservations sont maintenant terminées.</p>
+      <a href="https://www.radioscoop.com/formulaire/gagnez-vos-places-pour-scoop-live-la-soiree-de-l-annee-a-l-arena-de-decines_320037" class="win-tickets-btn" target="_blank">
+        Tentez de gagner vos places sur Radio Scoop !
+      </a>
+    </div>
+  </section>
+
+  <section class="form-section" style="display: none;">
+    <h2>Formulaire d'inscription</h2>
+    <form id="reservationForm">
+      <fieldset>
+        <legend>Responsable du groupe</legend>
+        <label for="respNom">Nom :</label>
+        <input type="text" id="respNom" name="respNom" required>
+        
+        <label for="respPrenom">Prénom :</label>
+        <input type="text" id="respPrenom" name="respPrenom" required>
+        
+        <label for="respEmail">Email :</label>
+        <input type="email" id="respEmail" name="respEmail" required>
+        
+        <label for="respTel">Téléphone :</label>
+        <input type="tel" id="respTel" name="respTel" placeholder="+33650905887" required>
+      </fieldset>
+      
+      <fieldset id="membersFieldset">
+        <legend>Membres du groupe (max. 5 places au total, incluant le responsable)</legend>
+        <div id="membersSection">
+          <!-- Les membres ajoutés apparaîtront ici -->
+        </div>
+        <!-- Boutons d'action pour la section membre -->
+        <button type="button" id="addMemberBtn">Ajouter un Membre</button>
+      </fieldset>
+      
+      <!-- Bouton de validation final, initialement masqué -->
+      <button type="submit" id="submitReservation" style="display:none;" disabled>Valider la réservation</button>
+    </form>
+    <div id="confirmation" class="hidden"></div>
+  </section>
+  
+  <footer class="bottom-banner">
+    <p>Bandeau d'information: Réservations fermées après le 17/02 à minuit</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
